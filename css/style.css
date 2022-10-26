@@ -1,3 +1,9 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 .container{
     max-width: 68.75rem;
     margin-left: auto;
@@ -21,7 +27,8 @@
     line-height: 1.875rem;
     text-align: center;
     border-radius: 50%;
-    left: calc(50% - 30px);
+    left: calc(50%);
+    cursor: pointer;
 }
 
 #arrow-up{
@@ -30,4 +37,12 @@
 
 #arrow-down{
     bottom: .625rem;
+}
+
+.slide{
+    display: none;
+}
+
+.active{
+    display: block;
 }
