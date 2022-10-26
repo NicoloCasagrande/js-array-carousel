@@ -7,5 +7,27 @@
 
 .container img{
     width: 100%;
+}
 
+.img-container{
+    position: relative;
+}
+
+.arrow{
+    position: absolute;
+    height: 1.875rem;
+    width: 1.875rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    line-height: 1.875rem;
+    text-align: center;
+    border-radius: 50%;
+    left: calc(50% - 30px);
+}
+
+#arrow-up{
+    top: .625rem;
+}
+
+#arrow-down{
+    bottom: .625rem;
 }
