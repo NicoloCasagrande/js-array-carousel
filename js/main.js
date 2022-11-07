@@ -31,15 +31,7 @@ const down = document.getElementById('arrow-down');
 var elements = document.querySelectorAll('.slide');
 
 // con questa funzione, al click della freccia up rimuovo la classe active all'elemento attivo, creo un ciclo if per azzerare il contatore se siamo sull'ultima foto e poi applico la classe active al successivo elemento
-up.addEventListener('click', function(){
-    elements[active].classList.remove('active');
-    if(active===img.length - 1){
-        active = 0;
-    }else{
-        active++;
-    }
-    elements[active].classList.add('active');
-});
+up.addEventListener('click', nextSlide);
 
 // con questa funzione, al click della freccia up rimuovo la classe active all'elemento attivo, creo un ciclo if per azzerare il contatore se siamo sull'ultima foto e poi applico la classe active al successivo elemento
 down.addEventListener('click', function(){
@@ -51,5 +43,17 @@ down.addEventListener('click', function(){
     }
     elements[active].classList.add('active');
 });
+
+setInterval(nextSlide, 3000);
+
+function nextSlide(){
+    elements[active].classList.remove('active');
+    if(active===img.length - 1){
+        active = 0;
+    }else{
+        active++;
+    }
+    elements[active].classList.add('active');
+}
 
 
